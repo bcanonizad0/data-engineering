@@ -1,0 +1,133 @@
+About: // creating customer information, and printing receipts. 
+
+To create a system for generating receipts for Lovely Loveseats, we can break down the project into a few key steps:
+
+Store the catalog data: Create variables to store the names and prices of items.
+Process customer purchases: Calculate the total price and create a list of purchased items.
+Print the receipt: Display the total price and the list of items in the receipt format.
+Here's an example of how you can do this in Python:
+
+// python code. 
+
+# Store item names and prices in variables
+lovely_loveseat_description = "Lovely Loveseat. Tufted polyester blend on wood. 32 inches high x 40 inches wide x 30 inches deep. Red or white."
+lovely_loveseat_price = 254.00
+
+stylish_settee_description = "Stylish Settee. Faux leather on birch. 29.50 inches high x 54.75 inches wide x 28 inches deep. Black."
+stylish_settee_price = 180.50
+
+luxurious_lamp_description = "Luxurious Lamp. Glass and iron. 36 inches tall. Brown with cream shade."
+luxurious_lamp_price = 52.15
+
+# Tax rate
+sales_tax = 0.088
+
+# Customer 1 purchases
+customer_one_total = 0
+customer_one_itemization = ""
+
+# Customer 1 buys a Lovely Loveseat
+customer_one_total += lovely_loveseat_price
+customer_one_itemization += lovely_loveseat_description
+
+# Customer 1 buys a Luxurious Lamp
+customer_one_total += luxurious_lamp_price
+customer_one_itemization += "\n" + luxurious_lamp_description
+
+# Calculate sales tax
+customer_one_tax = customer_one_total * sales_tax
+customer_one_total += customer_one_tax
+
+# Print the receipt
+print("Customer One Items:")
+print(customer_one_itemization)
+print("\nCustomer One Total:")
+print(f"${customer_one_total:.2f}")
+
+Explanation:
+Catalog Data: The names and prices of the items in the store's catalog are stored in variables.
+Customer Purchase: Variables are initialized to keep track of the total price and the item list for the customer.
+Item Addition: The items purchased by the customer are added to their total and item list.
+Sales Tax Calculation: The sales tax is calculated and added to the total price.
+Receipt Output: The item list and total price are printed to the terminal.
+This code will output the receipt for Customer One, listing the items purchased and the total cost including sales tax. You can expand this program by adding more customers or items, and by creating functions to handle the receipt generation process for multiple customers.
+
+
+//Final Answers + code. 
+
+# Step 1: Store item descriptions and prices
+lovely_loveseat_description = (
+    "Lovely Loveseat. Tufted polyester blend on wood. 32 inches high x 40 inches wide x 30 inches deep. Red or white."
+)
+lovely_loveseat_price = 254.00
+
+stylish_settee_description = (
+    "Stylish Settee. Faux leather on birch. 29.50 inches high x 54.75 inches wide x 28 inches deep. Black."
+)
+stylish_settee_price = 180.50
+
+luxurious_lamp_description = (
+    "Luxurious Lamp. Glass and iron. 36 inches tall. Brown with cream shade."
+)
+luxurious_lamp_price = 52.15
+
+# Step 2: Store sales tax rate
+sales_tax = 0.088
+
+# Step 3: Initialize customer one total and itemization
+customer_one_total = 0
+customer_one_itemization = ""
+
+# Step 4: Customer one purchases
+# Add Lovely Loveseat to customer one total and itemization
+customer_one_total += lovely_loveseat_price
+customer_one_itemization += lovely_loveseat_description
+
+# Add Luxurious Lamp to customer one total and itemization
+customer_one_total += luxurious_lamp_price
+customer_one_itemization += "\n" + luxurious_lamp_description
+
+# Step 5: Calculate sales tax for customer one
+customer_one_tax = customer_one_total * sales_tax
+
+# Add sales tax to customer one total
+customer_one_total += customer_one_tax
+
+# Step 6: Print the receipt for customer one
+print("Customer One Items:")
+print(customer_one_itemization)
+print("\nCustomer One Total:")
+print(f"${customer_one_total:.2f}")
+
+
+// explanation. 
+
+  Explanation of Each Step:
+Store Item Descriptions and Prices:
+
+We define variables for the descriptions and prices of the items in our catalog.
+Store Sales Tax Rate:
+
+We define a variable sales_tax to store the sales tax rate of 8.8%.
+Initialize Customer One Total and Itemization:
+
+We initialize customer_one_total to 0 and customer_one_itemization to an empty string. These variables will keep track of the total price and the item descriptions for customer one's purchases.
+Customer One Purchases:
+
+We add the price of the Lovely Loveseat to customer_one_total and append its description to customer_one_itemization.
+We then add the price of the Luxurious Lamp to customer_one_total and append its description to customer_one_itemization.
+Calculate Sales Tax for Customer One:
+
+We calculate the sales tax by multiplying customer_one_total by sales_tax.
+We add the calculated sales tax to customer_one_total.
+Print the Receipt for Customer One:
+
+We print the item descriptions and the total cost for customer one.
+This code will generate a receipt that lists the items purchased by customer one along with the total cost including sales tax.
+
+
+
+
+
+
+
